@@ -1,0 +1,50 @@
+---
+import Hr from "./Hr.astro";
+import Socials from "./Socials.astro";
+
+const currentYear = new Date().getFullYear();
+
+export interface Props {
+  noMarginTop?: boolean;
+}
+
+const { noMarginTop = false } = Astro.props;
+---
+
+<footer class:list={["w-full", { "mt-auto": !noMarginTop }]}>
+  <Hr noPadding />
+  <div
+    class="flex flex-col items-center justify-between py-6 sm:flex-row-reverse sm:py-4"
+  >
+    <Socials centered />
+    <div class="my-2 flex-col items-center whitespace-nowrap sm:flex-row">
+      <span class="">Copyright &#169; 2024-{currentYear}
+        by Asano.P. 
+        <a class="italic text-sm">
+          &nbsp;Made With Love <span aria-label="heart" style="color: #e25555; font-size: 1.1em;">♥</span>
+        </a>
+      </span>
+      
+      <span>
+          <br>
+              如无特别注明，本站内容均在 
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/" 
+               class="underline decoration-dashed underline-offset-4 hover:text-accent uppercase font-bold ">
+              署名-相同方式共享 4.0 国际 (CC BY-SA 4.0)  
+            </a>
+              许可协议下提供。     
+      </span>
+      
+      <span>
+        <br>
+        由 <a 
+            href="https://github.com/satnaing/astro-paper#readme"
+            class="underline decoration-dashed underline-offset-4 hover:text-accent capitalize font-bold"
+            >
+            AstroPaper</a> 驱动。
+      </span>
+      
+      
+    </div>
+  </div>
+</footer>
