@@ -1,6 +1,6 @@
 export const SITE = {
   website: "https://Asano-Blog.pages.dev/", // replace this with your deployed domain
-  author: "BloodyHand.D",
+  author: "Asano.D",
   profile: "https://Asano-Blog.pages.dev/",
   desc: "活在当下",
   title: "夏风归处",
