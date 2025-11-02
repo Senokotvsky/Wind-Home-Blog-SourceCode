@@ -4,7 +4,7 @@ title: "关于"
 ---
 
 
-[![walkintonight](https://www.imgur.la/images/2025/10/31/finalABOUTpic.md.jpg)](https://www.imgur.la/image/finalABOUTpic.6ehDGO)
+![walkintonight](https://www.imgur.la/images/2025/10/31/finalABOUTpic.jpg)
 
 ## 关于本站...
 

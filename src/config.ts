@@ -1,7 +1,7 @@
 export const SITE = {
-  website: "https://Asano-Blog.pages.dev/", // replace this with your deployed domain
-  author: "Asano.D",
-  profile: "https://Asano-Blog.pages.dev/",
+  website: "https://wind-home.pages.dev/", // replace this with your deployed domain
+  author: "Asano",
+  profile: "https://wind-home.pages.dev/",
   desc: "活在当下",
   title: "夏风归处",
   ogImage: "astropaper-og.jpg",
