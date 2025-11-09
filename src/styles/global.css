@@ -1,7 +1,8 @@
-@import "tailwindcss";
 @import "./typography.css";
 
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root,
 html[data-theme="light"] {
@@ -20,17 +21,20 @@ html[data-theme="dark"] {
   --border: #393e46;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-accent: var(--accent);
-  --color-muted: var(--muted);
-  --color-border: var(--border);
+@layer base {
+  :root {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-accent: var(--accent);
+    --color-muted: var(--muted);
+    --color-border: var(--border);
+  }
 }
 
 @layer base {
   * {
-    @apply border-border outline-accent/75;
+    @apply border-border;
+    outline-color: color-mix(in srgb, var(--color-accent) 75%, transparent);
     scrollbar-width: auto;
     scrollbar-color: var(--color-muted) transparent;
   }
@@ -38,11 +42,20 @@ html[data-theme="dark"] {
     @apply overflow-y-scroll scroll-smooth;
   }
   body {
-    @apply flex min-h-svh flex-col bg-background font-mono text-foreground selection:bg-accent/75 selection:text-background;
+    @apply flex min-h-svh flex-col bg-background font-mono text-foreground;
+  }
+  body ::selection {
+    background-color: color-mix(in srgb, var(--color-accent) 75%, transparent);
+    color: var(--color-background);
   }
   a,
   button {
-    @apply outline-offset-1 outline-accent focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-dashed;
+    @apply outline-offset-1;
+    outline-color: var(--color-accent);
+  }
+  a:focus-visible,
+  button:focus-visible {
+    @apply no-underline outline-2 outline-dashed;
   }
   button:not(:disabled),
   [role="button"]:not(:disabled) {
@@ -54,7 +67,7 @@ html[data-theme="dark"] {
   }
 }
 
-@utility max-w-app {
+.max-w-app {
   @apply max-w-4xl xl:max-w-5xl;
 }
 

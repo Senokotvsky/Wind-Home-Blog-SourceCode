@@ -67,7 +67,8 @@
     }
 
     code {
-      @apply rounded bg-muted/75 p-1 break-words text-foreground before:content-none after:content-none;
+      @apply rounded p-1 break-words text-foreground before:content-none after:content-none;
+      background-color: color-mix(in srgb, var(--color-muted) 75%, transparent);
     }
 
     .astro-code code {
@@ -75,7 +76,8 @@
     }
 
     blockquote {
-      @apply border-s-accent/80 break-words opacity-80;
+      @apply break-words opacity-80;
+      border-left-color: color-mix(in srgb, var(--color-accent) 80%, transparent);
     }
 
     details {
@@ -93,24 +95,36 @@
 
   /* ===== Code Blocks & Syntax Highlighting ===== */
   .astro-code {
-    @apply flex border bg-(--shiki-light-bg) text-(--shiki-light) outline-border [&_span]:text-(--shiki-light);
+    @apply flex border outline-border;
+    background-color: var(--shiki-light-bg);
+    color: var(--shiki-light);
+  }
+  .astro-code span {
+    color: var(--shiki-light);
   }
 
   html[data-theme="dark"] .astro-code {
-    @apply bg-(--shiki-dark-bg) text-(--shiki-dark) [&_span]:text-(--shiki-dark);
+    background-color: var(--shiki-dark-bg);
+    color: var(--shiki-dark);
+  }
+  html[data-theme="dark"] .astro-code span {
+    color: var(--shiki-dark);
   }
 
   /* Styles for Shiki transformers */
   /* https://shiki.style/packages/transformers */
   .astro-code {
     .line.diff.add {
-      @apply relative inline-block w-full bg-green-400/20 before:absolute before:-left-3 before:text-green-500 before:content-['+'];
+      @apply relative inline-block w-full before:absolute before:-left-3 before:text-green-500 before:content-['+'];
+      background-color: rgba(74, 222, 128, 0.2);
     }
     .line.diff.remove {
-      @apply relative inline-block w-full bg-red-500/20 before:absolute before:-left-3 before:text-red-500 before:content-['-'];
+      @apply relative inline-block w-full before:absolute before:-left-3 before:text-red-500 before:content-['-'];
+      background-color: rgba(248, 113, 113, 0.2);
     }
     .line.highlighted {
-      @apply inline-block w-full bg-slate-400/20;
+      @apply inline-block w-full;
+      background-color: rgba(148, 163, 184, 0.2);
     }
     .highlighted-word {
       @apply rounded-sm border border-border px-0.5 py-px;

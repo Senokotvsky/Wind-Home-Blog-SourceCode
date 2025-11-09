@@ -12,7 +12,6 @@ import IconRss from "@/assets/icons/IconRss.svg";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
 import { SITE } from "@/config";
 import { SOCIALS } from "@/constants";
-import tailwindcss from "@tailwindcss/vite";
 const posts = await getCollection("blog");
 
 const sortedPosts = getSortedPosts(posts);
@@ -110,8 +109,6 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 </Layout>
 
 <script>
-import tailwindcss from "@tailwindcss/vite";
-
   document.addEventListener("astro:page-load", () => {
     const indexLayout = (document.querySelector("#main-content") as HTMLElement)
       ?.dataset?.layout;
@@ -119,5 +116,4 @@ import tailwindcss from "@tailwindcss/vite";
       sessionStorage.setItem("backUrl", "/");
     }
   });
-
 </script>
