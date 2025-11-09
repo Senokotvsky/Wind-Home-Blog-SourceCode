@@ -1,10 +1,10 @@
 ---
 layout: ../layouts/AboutLayout.astro
 title: "关于"
+
 ---
 
-
-![walkintonight](https://www.imgur.la/images/2025/10/31/finalABOUTpic.jpg)
+![compressed-finalABOUTpic.jpg](https://free.picui.cn/free/2025/11/09/69102933a21a2.jpg)
 
 ## 关于本站...
 
@@ -16,11 +16,7 @@ title: "关于"
 
 **谢星霖**。原是某次为了启用马甲号随机生成的昵称，后成为我的主用网名兼笔名。
 
-*如果用心搜索，也许可以在某个小服遇到我留下的痕迹...?*
-
-
-
-
+<font color=transparent>如果用心搜索，也许可以在某个小服遇到我留下的痕迹...?</font>
 
 ## 其他信息
 
@@ -39,5 +35,6 @@ title: "关于"
 由 [AstroPaper](https://github.com/satnaing/astro-paper)驱动。如果你觉得网站的排版很美观，不妨给这个项目一个Star✨。
 
 
+*Made With Love by Asano.P*♥️
 
 

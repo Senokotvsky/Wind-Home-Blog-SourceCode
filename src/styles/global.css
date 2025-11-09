@@ -5,7 +5,7 @@
 
 :root,
 html[data-theme="light"] {
-  --background: #fdfdfdstop;
+  --background: #fdfdfd;
   --foreground: #282728;
   --accent: #006cac;
   --muted: #e6e6e6;
@@ -65,5 +65,14 @@ html[data-theme="dark"] {
 /* Source: https://piccalil.li/blog/a-more-modern-css-reset/ */
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
-  scroll-margin-block: 1rem;
+  scroll-margin-block: 1rdem;
+}
+
+/* Text stroke utility for adaptive outline */
+.text-stroke-white {
+  text-shadow: 
+    -1px -1px 0 var(--background),
+    1px -1px 0 var(--background),
+    -1px 1px 0 var(--background),
+    1px 1px 0 var(--background);
 }
