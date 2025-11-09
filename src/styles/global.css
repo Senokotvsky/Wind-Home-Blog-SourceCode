@@ -75,6 +75,14 @@ html[data-theme="dark"] {
   @apply underline decoration-wavy decoration-2 underline-offset-4;
 }
 
+.focus-outline {
+  @apply outline-offset-1;
+  outline-color: var(--color-accent);
+}
+.focus-outline:focus-visible {
+  @apply no-underline outline-2 outline-dashed;
+}
+
 /* Source: https://piccalil.li/blog/a-more-modern-css-reset/ */
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
