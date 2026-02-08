@@ -12,6 +12,7 @@ import { translateFor, getRelativeLocalePath } from "@/i18n/utils";
 import LanguagePicker from "./LanguagePicker.astro";
 
 const { pathname } = Astro.url;
+const siteName = SITE.website;
 
 const currentLocale = Astro.currentLocale;
 
@@ -46,6 +47,7 @@ const isActive = (path: string) => {
       class="relative flex w-full items-baseline justify-between bg-background p-4 sm:items-center sm:py-6"
     >
       <a
+        id="Title"
         href={getRelativeLocalePath(currentLocale, "/")}
         class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"
       >
@@ -53,7 +55,7 @@ const isActive = (path: string) => {
       </a>
       <nav
         id="nav-menu"
-        class="flex w-full flex-col items-center sm:ms-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0"
+        class="flex w-full flex-col items-center sm:flex-row sm:justify-end sm:space-x-4 sm:py-0"
       >
         <button
           id="menu-btn"
@@ -100,7 +102,7 @@ const isActive = (path: string) => {
               {t("about")}
             </a>
           </li>
-          {
+          <!--{
             SITE.showArchives && (
               <li class="col-span-3">
                 <LinkButton
@@ -119,7 +121,7 @@ const isActive = (path: string) => {
                 </LinkButton>
               </li>
             )
-          }
+          } -->
           <li class="col-span-1 flex items-center justify-center">
             <LinkButton
               href="/search"
@@ -161,6 +163,9 @@ const isActive = (path: string) => {
 </header>
 
 <script>
+  import { SITE } from "@/config";
+  import { pagesGlobToRssItems } from "@astrojs/rss";
+
   function toggleNav() {
     const menuBtn = document.querySelector("#menu-btn") as HTMLButtonElement;
     const menuItems = document.querySelector("#menu-items");
@@ -187,4 +192,153 @@ const isActive = (path: string) => {
 
   // Runs on view transitions navigation
   document.addEventListener("astro:after-swap", toggleNav);
+
+  //logics of hidden title&center buttons
+  function hideTitle() {
+    const titleElement = document.getElementById("Title");
+    const navMenu = document.getElementById("nav-menu");
+    const menuItems = document.getElementById("menu-items");
+
+    if (titleElement) {
+      titleElement.hidden = true;
+    }
+
+    // 只在桌面端调整导航菜单布局
+    if (window.matchMedia("(min-width: 640px)").matches) {
+      if (navMenu) {
+        // 移除右对齐，添加居中对齐
+        navMenu.classList.remove("sm:justify-end");
+        navMenu.classList.add("sm:justify-center");
+      }
+      if (menuItems) {
+        // 添加特殊类来调整布局
+        menuItems.classList.add("title-hidden-layout");
+
+        // 重新组织DOM结构：将前三个按钮包装在一个div中
+        reorganizeNavButtons(menuItems);
+      }
+    }
+  }
+
+  function showTitle() {
+    const titleElement = document.getElementById("Title");
+    const navMenu = document.getElementById("nav-menu");
+    const menuItems = document.getElementById("menu-items");
+
+    if (titleElement) {
+      titleElement.hidden = false;
+    }
+
+    // 只在桌面端恢复原始布局
+    if (window.matchMedia("(min-width: 640px)").matches) {
+      if (navMenu) {
+        // 恢复原始对齐方式
+        navMenu.classList.remove("sm:justify-center");
+        navMenu.classList.add("sm:justify-end");
+      }
+      if (menuItems) {
+        // 移除特殊布局类
+        menuItems.classList.remove("title-hidden-layout");
+
+        // 恢复原始DOM结构
+        restoreNavButtons(menuItems);
+      }
+    }
+  }
+
+  // 重新组织导航按钮：将前三个按钮包装在一个div中
+  function reorganizeNavButtons(menuItems: HTMLElement) {
+    // 如果已经重新组织过，则跳过
+    if (menuItems.querySelector(".nav-main-buttons")) return;
+
+    // 获取所有li元素
+    const listItems = Array.from(menuItems.children) as HTMLLIElement[];
+
+    // 前三个按钮是Posts, Tags, About
+    const mainButtons = listItems.slice(0, 3);
+    const utilityButtons = listItems.slice(3);
+
+    // 创建包装div
+    const mainButtonsContainer = document.createElement("div");
+    mainButtonsContainer.className = "nav-main-buttons";
+
+    // 将前三个按钮移动到包装div中
+    mainButtons.forEach(button => {
+      mainButtonsContainer.appendChild(button);
+    });
+
+    // 创建功能按钮容器
+    const utilityButtonsContainer = document.createElement("div");
+    utilityButtonsContainer.className = "nav-utility-buttons";
+
+    // 将功能按钮移动到容器中
+    utilityButtons.forEach(button => {
+      utilityButtonsContainer.appendChild(button);
+    });
+
+    // 清空原始菜单并添加新的结构
+    menuItems.innerHTML = "";
+    menuItems.appendChild(mainButtonsContainer);
+    menuItems.appendChild(utilityButtonsContainer);
+  }
+
+  // 恢复原始导航按钮结构
+  function restoreNavButtons(menuItems: HTMLElement) {
+    // 如果没有重新组织过，则跳过
+    const mainButtonsContainer = menuItems.querySelector(".nav-main-buttons");
+    const utilityButtonsContainer = menuItems.querySelector(
+      ".nav-utility-buttons"
+    );
+
+    if (!mainButtonsContainer || !utilityButtonsContainer) return;
+
+    // 获取所有按钮
+    const mainButtons = Array.from(
+      mainButtonsContainer.children
+    ) as HTMLLIElement[];
+    const utilityButtons = Array.from(
+      utilityButtonsContainer.children
+    ) as HTMLLIElement[];
+    const allButtons = [...mainButtons, ...utilityButtons];
+
+    // 清空原始菜单并恢复原始结构
+    menuItems.innerHTML = "";
+    allButtons.forEach(button => {
+      menuItems.appendChild(button);
+    });
+  }
+
+  function checkAndHideTitle() {
+    const hero = document.getElementById("hero");
+
+    if (hero) {
+      hideTitle();
+    } else {
+      showTitle();
+    }
+  }
+
+  // 立即执行检查，然后监听DOM加载完成
+  function initTitleVisibility() {
+    // 使用requestAnimationFrame确保在下一帧立即执行，减少闪烁
+    requestAnimationFrame(() => {
+      checkAndHideTitle();
+    });
+
+    // 如果DOM还未完全加载，再监听一次
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", () => {
+        requestAnimationFrame(checkAndHideTitle);
+      });
+    }
+  }
+
+  // 立即初始化
+  initTitleVisibility();
+
+  // 监听窗口大小变化，确保响应式布局正确
+  window.addEventListener("resize", checkAndHideTitle);
+
+  // Runs on view transitions navigation
+  document.addEventListener("astro:after-swap", checkAndHideTitle);
 </script>

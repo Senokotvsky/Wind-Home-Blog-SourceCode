@@ -15,9 +15,9 @@ html[data-theme="light"] {
 html[data-theme="dark"] {
   --background: #212737;
   --foreground: #eaedf3;
-  --accent: #ff6b01;
-  --muted: #343f60bf;
-  --border: #ab4b08;
+  --accent: #007db7;
+  --muted: #393e46;
+  --border: #00adb5;
 }
 
 @theme inline {
@@ -60,6 +60,46 @@ html[data-theme="dark"] {
 
 .active-nav {
   @apply underline decoration-wavy decoration-2 underline-offset-4;
+}
+
+/* 标题隐藏时的导航菜单布局 */
+@media (min-width: 640px) {
+  /* 当标题隐藏时，调整导航菜单布局 */
+  #menu-items.title-hidden-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+  }
+
+  /* 中间：前三个按钮（Posts, Tags, About）作为一组，相对于整个容器居中 */
+  #menu-items.title-hidden-layout .nav-main-buttons {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 1.25rem; /* 与原始 sm:gap-x-5 保持一致 */
+  }
+
+  /* 标题隐藏时，增加前三个按钮的字号 */
+  #menu-items.title-hidden-layout .nav-main-buttons a {
+    font-size: 1.125rem; /* text-lg: 18px */
+    line-height: 1.75rem; /* 与text-lg匹配 */
+  }
+
+  /* 右侧：功能按钮组（搜索、语言选择器、主题切换） */
+  #menu-items.title-hidden-layout .nav-utility-buttons {
+    display: flex;
+    margin-left: auto; /* 推到最右侧 */
+    gap: 1.25rem; /* 保持一致的间距 */
+  }
+
+  /* 确保导航菜单容器正确居中 */
+  #nav-menu.sm\\:justify-center {
+    justify-content: center !important;
+  }
 }
 
 /* Source: https://piccalil.li/blog/a-more-modern-css-reset/ */
