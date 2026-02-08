@@ -1,35 +1,49 @@
 ---
+layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-AstroPaper is a minimal, responsive and SEO-friendly Astro blog theme. I designed and crafted this based on [my personal blog](https://satnaing.dev/blog).
+![compressed-finalABOUTpic.jpg](https://free.picui.cn/free/2025/11/09/69102933a21a2.jpg)
 
-This theme is aimed to be accessible out of the box. Light and dark mode are supported by
-default and additional color schemes can also be configured.
+## About This Site...
 
-This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations. So, see the documentation for more info.
+**Wind-Home**.Linux & Developing & ManyMore.
 
-<div>
-  <img src="/dev.svg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
-</div>
+At 1.0 of this site,It serves solely as a test site for the Astro engine.Later, after several rounds of code and text restructuring, it became my blog site.
 
-## Tech Stack
+## About Me...
 
-This theme is written in vanilla JavaScript (+ TypeScript for type checking) and a little bit of ReactJS for some interactions. TailwindCSS is used for styling; and Markdown is used for blog contents.
+**Asano.P**.This name comes from A Random-Name-Generator.Later, it gradually became my primary nickname.
 
-## Features
+<p style="color: transparent">
+    I don't think we've ever met in the"
+    <a href="https://wiki.ria.red/wiki/Goldfarmer41" style="color: transparent">
+        SERVER
+    </a>
+    ".
+</p>
 
-Here are certain features of this site.
+## Other Infomation
 
-- fully responsive and accessible
-- SEO-friendly
-- light & dark mode
-- fuzzy search
-- super fast performance
-- draft posts
-- pagination
-- sitemap & rss feed
-- highly customizable
+### Contact Me
 
-If you like this theme, you can star/contribute to the [repo](https://github.com/satnaing/astro-paper).  
-Or you can even give any feedback via my [email](mailto:contact@satnaing.dev).
+- **Email**：[mailto:magmalatte@outlook.com](mailto:magmalatte@outlook.com)
+
+- **Martix**：@asano.d:matrix.org
+
+### Licensing and Reproduction Notice
+
+All Post & Layout on This Website "[wind-home.pages.dev](/)" are provided under the **Attribution-ShareAlike 4.0 International** [(CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/) license.If you want to Repost posts on this site，Please provide the source.
+
+Photo on this "About" page are shooting by me in JXCIS。All rights reserved.
+
+### 3rd Party Resources
+
+Powered By [AstroPaper-i18n](https://github.com/satnaing/astro-paper) If you like this theme, you can star/contribute to the repo ✨。
+
+Illustration on frontpage：[ksmtk79@Pixiv](https://www.pixiv.net/artworks/104633732)
+<br>
+
+<br>
+
+##### _Made With_ ♥️ _by Asano.P_

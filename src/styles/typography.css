@@ -7,6 +7,18 @@
   .prose a {
     @apply break-words hover:!text-accent;
   }
+
+  /* Ensure transparent text remains transparent even within .prose context */
+  /* This is important for hidden links or text that should not be visible */
+  .prose [style*="color: transparent"],
+  .prose [style*="color:transparent"] {
+    color: transparent !important;
+  }
+  .prose a[style*="color: transparent"],
+  .prose a[style*="color:transparent"] {
+    color: transparent !important;
+  }
+
   .prose thead th:first-child,
   tbody td:first-child,
   tfoot td:first-child {

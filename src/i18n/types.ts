@@ -1,3 +1,5 @@
+import { string } from "astro/zod";
+
 export interface I18nStrings {
   "site.title": string;
   "site.desc": string;
@@ -43,7 +45,10 @@ export interface I18nStrings {
   toggleLightAndDark: string;
   "pagination.prev": string;
   "pagination.next": string;
-  "footer.text": string;
+  "license.text": string;
+  "license.CC.name": string;
+  "license.CC.text.top": string;
+  "license.CC.text.down": string;
   "date.published": string;
   "date.updated": string;
   "date.month.1": string;

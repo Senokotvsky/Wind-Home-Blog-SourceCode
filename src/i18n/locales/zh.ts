@@ -1,17 +1,15 @@
 import type { I18nStrings } from "@/i18n/types";
 
 const baseStrings = {
-  "site.title": "AstroPaper 多语言版",
-  "site.desc": "支持多语言的 AstroPaper 主题分支",
+  "site.title": "夏风归处",
+  "site.desc": "夏风归处 Blog.",
 };
 
 const CNLocale: I18nStrings = {
   ...baseStrings,
-  "hero.title": "你好",
+  "hero.title": "夏风归处",
   "hero.body": `
-        AstroPaper 是一个极简、响应式、无障碍且对SEO友好的 Astro 博客主题。
-        该主题遵循最佳实践，开箱即提供无障碍支持。
-        默认支持浅色和深色模式，此外还可以配置其他配色方案。
+      向光去，永不止步。
 `,
   "hero.beforeReadme": "阅读博客文章或查看",
   "hero.readme": "README",
@@ -21,6 +19,7 @@ const CNLocale: I18nStrings = {
   by: "作者",
   about: "关于",
   socialLinks: "社交链接",
+
   home: "首页",
   posts: "文章",
   "posts.desc": "我发布的所有文章。",
@@ -53,7 +52,10 @@ const CNLocale: I18nStrings = {
   toggleLightAndDark: "切换浅色/深色模式",
   "pagination.prev": "上一页",
   "pagination.next": "下一页",
-  "footer.text": "版权所有 © {year} | 保留所有权利",
+  "license.text": "版权所有 © {year} | 保留所有权利",
+  "license.CC.name": "署名-相同方式共享 4.0 国际 (CC BY-SA 4.0)",
+  "license.CC.text.down": "许可协议下提供。",
+  "license.CC.text.top": "如无特别注明，本站内容均在",
   "date.published": "发布于",
   "date.updated": "更新于",
   "date.month.1": "一月",
