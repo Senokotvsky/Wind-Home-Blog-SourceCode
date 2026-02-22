@@ -41,7 +41,6 @@ title: "关于"
 
 由 [AstroPaper-i18n](https://github.com/yousef8/astro-paper-i18n) 驱动。如果你觉得网站的排版很美观，不妨给这个项目一个Star✨。
 
-首页图片：[ksmtk79@Pixiv](https://www.pixiv.net/artworks/104633732)
 <br>
 
 <br>

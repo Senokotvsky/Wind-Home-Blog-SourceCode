@@ -41,7 +41,6 @@ Photo on this "About" page are shooting by me in JXCIS。All rights reserved.
 
 Powered By [AstroPaper-i18n](https://github.com/satnaing/astro-paper) If you like this theme, you can star/contribute to the repo ✨。
 
-Illustration on frontpage：[ksmtk79@Pixiv](https://www.pixiv.net/artworks/104633732)
 <br>
 
 <br>
