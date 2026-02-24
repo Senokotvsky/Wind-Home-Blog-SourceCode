@@ -16,7 +16,7 @@ html[data-theme="dark"] {
   --background: #212737;
   --foreground: #eaedf3;
   --accent: #007db7;
-  --muted: #393e46;
+  --muted: #00696f;
   --border: #00adb5;
 }
 
@@ -100,6 +100,17 @@ html[data-theme="dark"] {
   #nav-menu.sm\\:justify-center {
     justify-content: center !important;
   }
+}
+
+.HeroBg {
+  background-color: var(--background);
+  background-image:
+    radial-gradient(var(--muted) 30%, transparent 0),
+    radial-gradient(var(--muted) 30%, transparent 0);
+  background-size: 10px 10px;
+  background-position:
+    0 0,
+    10px 30px;
 }
 
 /* Source: https://piccalil.li/blog/a-more-modern-css-reset/ */

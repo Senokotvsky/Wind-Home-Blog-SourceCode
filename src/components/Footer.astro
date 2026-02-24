@@ -10,9 +10,13 @@ const t = translateFor(Astro.currentLocale);
 
 const LOCALE = getLocaleInfo(Astro.currentLocale);
 
-const currentYear = new Date().toLocaleDateString(LOCALE.langTag, {
-  year: "numeric",
-});
+const prtTime = new Date();
+const startTime = new Date("2025-10-26");
+
+const dayPassed = Math.floor(
+  (prtTime.getTime() - startTime.getTime()) / (1000 * 60 * 60 * 24)
+);
+const currentYear = prtTime.getFullYear();
 
 const { noMarginTop = false } = Astro.props;
 ---
@@ -41,6 +45,9 @@ const { noMarginTop = false } = Astro.props;
       <span class="block sm:inline">
         {t("license.CC.text.down")}
       </span>
+      <div class="mb-3 text-center sm:text-left">
+        <span>{t("website.UpTime", { dayPassed })}</span>
+      </div>
     </div>
   </div>
 </footer>

@@ -49,6 +49,7 @@ export interface I18nStrings {
   "license.CC.name": string;
   "license.CC.text.top": string;
   "license.CC.text.down": string;
+  "website.UpTime": string;
   "date.published": string;
   "date.updated": string;
   "date.month.1": string;

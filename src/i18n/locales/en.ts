@@ -54,7 +54,13 @@ const ENLocale: I18nStrings = {
   toggleLightAndDark: "Toggles light & dark",
   "pagination.prev": "Prev",
   "pagination.next": "Next",
-  "footer.text": "Copyright © {year} | All rights reserved",
+  "license.text": "Copyright © {year} | All rights reserved",
+  "license.CC.name":
+    "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)",
+  "license.CC.text.top":
+    "Unless otherwise noted, the content of this site is licensed under the",
+  "license.CC.text.down": "license.",
+  "website.UpTime": "This site has been running for {dayPassed} days",
   "date.published": "Published",
   "date.updated": "Updated",
   "date.month.1": "January",

@@ -56,6 +56,7 @@ const CNLocale: I18nStrings = {
   "license.CC.name": "署名-相同方式共享 4.0 国际 (CC BY-SA 4.0)",
   "license.CC.text.down": "许可协议下提供。",
   "license.CC.text.top": "如无特别注明，本站内容均在",
+  "website.UpTime": "本站已运行{dayPassed}天",
   "date.published": "发布于",
   "date.updated": "更新于",
   "date.month.1": "一月",
