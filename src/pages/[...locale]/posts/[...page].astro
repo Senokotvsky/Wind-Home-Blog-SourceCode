@@ -19,7 +19,9 @@ export const getStaticPaths = (async ({ paginate }) => {
   });
 
   const paths = SUPPORTED_LOCALES.flatMap(locale => {
-    const posts = postsByLocale[locale] || [];
+    // When FILTER_POSTS_BY_LANGUAGE is false, postsByLocale returns { all: allPosts }
+    // So we need to check for the "all" key first
+    const posts = postsByLocale.all || postsByLocale[locale] || [];
 
     return paginate(getSortedPosts(posts), {
       params: { locale: locale === DEFAULT_LOCALE ? undefined : locale },

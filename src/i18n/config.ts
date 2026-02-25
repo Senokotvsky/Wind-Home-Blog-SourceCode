@@ -45,3 +45,10 @@ export const LOCALES_TO_LANG = Object.fromEntries(
     profile.langTag,
   ])
 ) as Record<keyof typeof localeToProfile, string>;
+
+/**
+ * Whether to filter posts by language in posts pages.
+ * When set to true (default), only posts in the current language are shown.
+ * When set to false, all posts in all languages are shown regardless of current language.
+ */
+export const FILTER_POSTS_BY_LANGUAGE = false;

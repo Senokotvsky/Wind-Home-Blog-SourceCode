@@ -23,7 +23,9 @@ export async function GET(context: APIContext) {
   const postsByLocale = await getPostsGroupedByLocale({
     allowedLocales: SUPPORTED_LOCALES,
   });
-  const posts = postsByLocale[locale];
+  // When FILTER_POSTS_BY_LANGUAGE is false, postsByLocale returns { all: allPosts }
+  // So we need to check for the "all" key first
+  const posts = postsByLocale.all || postsByLocale[locale];
   const sortedPosts = getSortedPosts(posts);
 
   return rss({

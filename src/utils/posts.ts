@@ -1,5 +1,5 @@
 import { BLOG_PATH } from "@/content.config";
-import { type LocaleKey } from "@/i18n/config";
+import { type LocaleKey, FILTER_POSTS_BY_LANGUAGE } from "@/i18n/config";
 import { getCollection, type CollectionEntry } from "astro:content";
 
 type GetPostsOptions = {
@@ -24,6 +24,11 @@ export const getPostsByLocale = async (
   locale: LocaleKey,
   { draft = true }: { draft?: boolean } = {}
 ) => {
+  // If filtering by language is disabled, return all posts regardless of language
+  if (!FILTER_POSTS_BY_LANGUAGE) {
+    return await getPosts({ draft });
+  }
+
   const postsByLocale = await getPostsGroupedByLocale({
     draft,
     allowedLocales: [locale],
@@ -40,10 +45,19 @@ export const getPostsByLocale = async (
 export const getPostsGroupedByLocale = async ({
   draft,
   allowedLocales,
-}: GetPostsOptions = {}) =>
-  groupPostsByLocale(await getPosts({ draft, allowedLocales }), {
+}: GetPostsOptions = {}) => {
+  // If filtering by language is disabled, return all posts in a single group
+  if (!FILTER_POSTS_BY_LANGUAGE) {
+    const allPosts = await getPosts({ draft });
+    // Return all posts under a special key or as a flat array
+    // For compatibility with existing code, we'll return them under a "all" key
+    return { all: allPosts };
+  }
+
+  return groupPostsByLocale(await getPosts({ draft, allowedLocales }), {
     allowedLocales,
   });
+};
 
 /**
  * Retrieves all blog posts with optional filtering.

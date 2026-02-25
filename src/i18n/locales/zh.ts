@@ -11,7 +11,7 @@ const CNLocale: I18nStrings = {
   "hero.body": `
       向光去，永不止步。
 `,
-  "hero.beforeReadme": "阅读博客文章或查看",
+  "hero.beforeReadme": "阅读博客或查看",
   "hero.readme": "README",
   "hero.afterReadme": "获取更多信息。",
   copy: "复制",
@@ -22,11 +22,11 @@ const CNLocale: I18nStrings = {
 
   home: "首页",
   posts: "文章",
-  "posts.desc": "我发布的所有文章。",
+  "posts.desc": "此站点上的所有文章。",
   tag: "标签",
   "tag.desc": '所有带有"{name}"标签的文章。',
   tags: "标签",
-  "tags.desc": "文章中使用的所有标签",
+  "tags.desc": "文章中使用的所有标签。",
   archives: "归档",
   "archives.desc": "我归档的所有文章。",
   featured: "精选",

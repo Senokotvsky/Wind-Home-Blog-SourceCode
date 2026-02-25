@@ -39,7 +39,7 @@ title: "关于"
 
 ### 使用到的第三方资源
 
-由 [AstroPaper-i18n](https://github.com/yousef8/astro-paper-i18n) 驱动。如果你觉得网站的排版很美观，不妨给这个项目一个Star✨。
+由 [AstroPaper-i18n](https://github.com/yousef8/astro-paper-i18n) 驱动。如果你喜欢这个主题，不妨给这个项目一个Star✨。
 
 <br>
 

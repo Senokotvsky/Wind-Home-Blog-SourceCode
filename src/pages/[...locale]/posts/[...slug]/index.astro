@@ -17,7 +17,9 @@ export async function getStaticPaths() {
   });
 
   const paths = SUPPORTED_LOCALES.flatMap(locale => {
-    const posts = postsByLocale[locale] || [];
+    // When FILTER_POSTS_BY_LANGUAGE is false, postsByLocale returns { all: allPosts }
+    // So we need to check for the "all" key first
+    const posts = postsByLocale.all || postsByLocale[locale] || [];
 
     const postResult = posts.map(post => ({
       params: {

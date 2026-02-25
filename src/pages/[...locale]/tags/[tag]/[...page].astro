@@ -19,7 +19,9 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   });
 
   return SUPPORTED_LOCALES.flatMap(localeKey => {
-    const posts = postsByLocale[localeKey] || [];
+    // When FILTER_POSTS_BY_LANGUAGE is false, postsByLocale returns { all: allPosts }
+    // So we need to check for the "all" key first
+    const posts = postsByLocale.all || postsByLocale[localeKey] || [];
 
     const tags = getUniqueTags(posts);
 
