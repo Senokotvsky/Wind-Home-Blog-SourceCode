@@ -4,6 +4,7 @@ import IconGitHub from "@/assets/icons/IconGitHub.svg";
 import IconLinkedin from "@/assets/icons/IconLinkedin.svg";
 import IconMail from "@/assets/icons/IconMail.svg";
 import IconPinterest from "@/assets/icons/IconPinterest.svg";
+import IconQQ from "@/assets/icons/IconQQ.svg";
 import IconTelegram from "@/assets/icons/IconTelegram.svg";
 import IconWhatsapp from "@/assets/icons/IconWhatsapp.svg";
 import { translateFor } from "@/i18n/utils";
@@ -47,34 +48,16 @@ export const SOCIALS: Social[] = [
 
 export const SHARE_LINKS: Social[] = [
   {
-    name: "WhatsApp",
-    href: "https://wa.me/?text=",
-    linkTitle: (t: Translator) => t("sharePost.via", { media: "WhatsApp" }),
-    icon: IconWhatsapp,
-  },
-  {
-    name: "Facebook",
-    href: "https://www.facebook.com/sharer.php?u=",
-    linkTitle: (t: Translator) => t("sharePost.on", { media: "Facebook" }),
-    icon: IconFacebook,
-  },
-  {
     name: "X",
     href: "https://x.com/intent/post?url=",
     linkTitle: (t: Translator) => t("sharePost.on", { media: "X" }),
     icon: IconBrandX,
   },
   {
-    name: "Telegram",
-    href: "https://t.me/share/url?url=",
-    linkTitle: (t: Translator) => t("sharePost.via", { media: "Telegram" }),
-    icon: IconTelegram,
-  },
-  {
-    name: "Pinterest",
-    href: "https://pinterest.com/pin/create/button/?url=",
-    linkTitle: (t: Translator) => t("sharePost.on", { media: "Pinterest" }),
-    icon: IconPinterest,
+    name: "QQ",
+    href: "https://connect.qq.com/widget/shareqq/index.html?url=",
+    linkTitle: (t: Translator) => t("sharePost.on", { media: "QQ" }),
+    icon: IconQQ,
   },
   {
     name: "Mail",

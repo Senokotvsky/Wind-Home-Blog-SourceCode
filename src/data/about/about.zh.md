@@ -7,7 +7,7 @@ title: "关于"
 
 ## 关于本站...
 
-**夏风归处**，Linux & Developing & ManyMore.
+**夏风归处**，CGI & Developing & ManyMore.
 
 本站创建的最初目的是测试偶然看到的Astro引擎，后在几次代码和文本上的重构后逐渐转变成博客类网站。
 

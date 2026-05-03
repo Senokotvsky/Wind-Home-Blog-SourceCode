@@ -7,7 +7,7 @@ title: "About"
 
 ## About This Site...
 
-**Wind-Home**.Linux & Developing & ManyMore.
+**Wind-Home**.CGI & Developing & ManyMore.
 
 At 1.0 of this site,It serves solely as a test site for the Astro engine.Later, after several rounds of code and text restructuring, it became my blog site.
 
