@@ -2,7 +2,7 @@ export const SITE = {
   website: "https://wind-home.pages.dev", // replace this with your deployed domain
   author: "Asano.P",
   profile: "https://yousef8.github.io/astro-paper-i18n",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "og-v3.png",
   lightAndDarkMode: true,
   postPerIndex: 4,
   postPerPage: 4,
