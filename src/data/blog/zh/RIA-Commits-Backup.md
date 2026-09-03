@@ -1,6 +1,6 @@
 ---
 title: "RIA 服务器已下架评论"
-pubDatetime: 2026-09-04
+pubDatetime: 2026-09-03
 description: "出于未知原因，RIA在MCMod上的评论页被下架了，笔者利用网页时光机对此做了补档。"
 tags:
   - RIA

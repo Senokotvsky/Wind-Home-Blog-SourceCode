@@ -1,0 +1,85 @@
+[WARN] The "pnpm" field in package.json is no longer read by pnpm. The following keys were ignored: "pnpm.onlyBuiltDependencies". See https://pnpm.io/settings for the new home of each setting.
+(node:26656) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2m15:33:18[22m [34m[content][39m Syncing content
+[2m15:33:18[22m [34m[content][39m Synced content
+[2m15:33:18[22m [34m[types][39m Generated [2m481ms[22m
+[2m15:33:18[22m [34m[build][39m output: [34m"static"[39m
+[2m15:33:18[22m [34m[build][39m mode: [34m"static"[39m
+[2m15:33:18[22m [34m[build][39m directory: [34mD:\Data\Work\Wind-Home-Blog-SourceCode\dist\[39m
+[2m15:33:18[22m [34m[build][39m Collecting build info...
+[2m15:33:18[22m [34m[build][39m [32m鉁?Completed in 517ms.[39m
+[2m15:33:18[22m [34m[build][39m Building static entrypoints...
+Found 1 warning while optimizing generated CSS:
+
+鈹?    gap: 1.25rem;
+鈹?  }
+鈹?[22m   #nav-menu.sm\\:justify-center {
+鈹?[22m                  ^-- 'justify-center' is not recognized as a valid pseudo-class. Did you mean '::justify-center' (pseudo-element) or is this a typo?
+鈹?[22m
+鈹?    justify-content: center !important;
+鈹?  }
+
+[2m15:33:22[22m [34m[vite][39m [32m鉁?built in 4.30s[39m
+[2m15:33:22[22m [34m[build][39m [32m鉁?Completed in 4.35s.[39m
+
+[42m[30m building client (vite) [39m[49m
+[2m15:33:22[22m [34m[vite][39m transforming...
+[2m15:33:22[22m [34m[vite][39m [32m鉁?[39m 50 modules transformed.
+[2m15:33:22[22m [34m[vite][39m rendering chunks...
+[2m15:33:22[22m [34m[vite][39m computing gzip size...
+[2m15:33:22[22m [34m[vite][39m [2mdist/[22m[36m_astro/search.astro_astro_type_script_index_0_lang.D6Nwapuk.js        [39m[1m[2m 2.14 kB[22m[1m[22m[2m 鈹?gzip:  1.07 kB[22m
+[2m15:33:22[22m [34m[vite][39m [2mdist/[22m[36m_astro/ClientRouter.astro_astro_type_script_index_0_lang.QW52Ox2j.js  [39m[1m[2m15.33 kB[22m[1m[22m[2m 鈹?gzip:  5.27 kB[22m
+[2m15:33:22[22m [34m[vite][39m [2mdist/[22m[36m_astro/Header.astro_astro_type_script_index_0_lang.Dlz64iCJ.js        [39m[1m[2m61.39 kB[22m[1m[22m[2m 鈹?gzip: 14.78 kB[22m
+[2m15:33:22[22m [34m[vite][39m [2mdist/[22m[36m_astro/ui-core.DRQ_9ezY.js                                            [39m[1m[2m72.93 kB[22m[1m[22m[2m 鈹?gzip: 22.86 kB[22m
+[2m15:33:22[22m [34m[vite][39m [32m鉁?built in 453ms[39m
+
+[42m[30m generating static routes [39m[49m
+[2m15:33:23[22m [32m鈻?[39m src/pages/404.astro
+[2m15:33:23[22m   [34m鈹斺攢[39m [2m/404.html[22m [2m(+10ms)[22m 
+[2m15:33:23[22m [35m位[39m src/pages/robots.txt.ts
+[2m15:33:23[22m   [34m鈹斺攢[39m [2m/robots.txt[22m [2m(+2ms)[22m 
+[2m15:33:23[22m [32m鈻?[39m src/pages/[...locale]/about.astro
+[2m15:33:23[22m   [34m鈹溾攢[39m [2m/about/index.html[22m [2m(+9ms)[22m 
+[2m15:33:23[22m   [34m鈹斺攢[39m [2m/en/about/index.html[22m [2m(+4ms)[22m 
+[2m15:33:23[22m [32m鈻?[39m src/pages/[...locale]/archives/index.astro
+[2m15:33:23[22m   [34m鈹溾攢[39m [2m/archives/index.html[22m [2m(+13ms)[22m 
+[2m15:33:23[22m   [34m鈹斺攢[39m [2m/en/archives/index.html[22m [2m(+5ms)[22m 
+[2m15:33:23[22m [35m位[39m src/pages/[...locale]/og.png.ts
+[2m15:33:23[22m   [34m鈹溾攢[39m [2m/og.png[22m [31m(+7.89s)[39m 
+[2m15:33:31[22m   [34m鈹斺攢[39m [2m/en/og.png[22m [31m(+7.89s)[39m 
+[2m15:33:38[22m [35m位[39m src/pages/[...locale]/posts/[...slug]/index.png.ts
+[2m15:33:38[22m   [34m鈹溾攢[39m [2m/posts/ria-commits-backup/index.png[22m [31m(+4.64s)[39m 
+[2m15:33:43[22m   [34m鈹溾攢[39m [2m/posts/v3-publish-note/index.png[22m [31m(+1.64s)[39m 
+[2m15:33:45[22m   [34m鈹溾攢[39m [2m/en/posts/ria-commits-backup/index.png[22m [31m(+2.01s)[39m 
+[2m15:33:47[22m   [34m鈹斺攢[39m [2m/en/posts/v3-publish-note/index.png[22m [31m(+1.32s)[39m 
+[2m15:33:48[22m [32m鈻?[39m src/pages/[...locale]/posts/[...page].astro
+[2m15:33:48[22m   [34m鈹溾攢[39m [2m/posts/index.html[22m [2m(+4ms)[22m 
+[2m15:33:48[22m   [34m鈹斺攢[39m [2m/en/posts/index.html[22m [2m(+19ms)[22m 
+[2m15:33:48[22m [32m鈻?[39m src/pages/[...locale]/posts/[...slug]/index.astro
+[2m15:33:48[22m   [34m鈹溾攢[39m [2m/posts/ria-commits-backup/index.html[22m [2m(+8ms)[22m 
+[2m15:33:48[22m   [34m鈹溾攢[39m [2m/posts/v3-publish-note/index.html[22m [2m(+5ms)[22m 
+[2m15:33:48[22m   [34m鈹溾攢[39m [2m/en/posts/ria-commits-backup/index.html[22m [2m(+5ms)[22m 
+[2m15:33:48[22m   [34m鈹斺攢[39m [2m/en/posts/v3-publish-note/index.html[22m [2m(+4ms)[22m 
+[2m15:33:48[22m [35m位[39m src/pages/[...locale]/rss.xml.ts
+[2m15:33:48[22m   [34m鈹溾攢[39m [2m/rss.xml[22m [2m(+5ms)[22m 
+[2m15:33:48[22m   [34m鈹斺攢[39m [2m/en/rss.xml[22m [2m(+3ms)[22m 
+[2m15:33:48[22m [32m鈻?[39m src/pages/[...locale]/search.astro
+[2m15:33:48[22m   [34m鈹溾攢[39m [2m/search/index.html[22m [2m(+4ms)[22m 
+[2m15:33:48[22m   [34m鈹斺攢[39m [2m/en/search/index.html[22m [2m(+3ms)[22m 
+[2m15:33:48[22m [32m鈻?[39m src/pages/[...locale]/tags/[tag]/[...page].astro
+[2m15:33:48[22m   [34m鈹溾攢[39m [2m/tags/2026/index.html[22m [2m(+5ms)[22m 
+[2m15:33:48[22m   [34m鈹溾攢[39m [2m/tags/update/index.html[22m [2m(+4ms)[22m 
+[2m15:33:48[22m   [34m鈹溾攢[39m [2m/en/tags/2026/index.html[22m [2m(+4ms)[22m 
+[2m15:33:48[22m   [34m鈹斺攢[39m [2m/en/tags/update/index.html[22m [2m(+3ms)[22m 
+[2m15:33:48[22m [32m鈻?[39m src/pages/[...locale]/tags/index.astro
+[2m15:33:48[22m   [34m鈹溾攢[39m [2m/tags/index.html[22m [2m(+4ms)[22m 
+[2m15:33:48[22m   [34m鈹斺攢[39m [2m/en/tags/index.html[22m [2m(+4ms)[22m 
+[2m15:33:48[22m [32m鈻?[39m src/pages/[...locale]/index.astro
+[2m15:33:48[22m   [34m鈹溾攢[39m [2m/index.html[22m [2m(+5ms)[22m 
+[2m15:33:48[22m   [34m鈹斺攢[39m [2m/en/index.html[22m [2m(+4ms)[22m 
+[2m15:33:48[22m [32m鉁?Completed in 25.74s.
+[39m
+[2m15:33:48[22m [34m[@astrojs/sitemap][39m `sitemap-index.xml` created at `dist`
+[2m15:33:48[22m [34m[build][39m 21 page(s) built in [1m31.17s[22m
+[2m15:33:48[22m [34m[build][39m [1mComplete![22m
