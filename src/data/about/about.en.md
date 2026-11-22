@@ -15,14 +15,6 @@ At 1.0 of this site,It serves solely as a test site for the Astro engine.Later, 
 
 **Asano.P**.This name comes from A Random-Name-Generator.Later, it gradually became my primary nickname.
 
-<p style="color: transparent">
-    I don't think we've ever met in the"
-    <a href="https://wiki.ria.red/wiki/Goldfarmer41" style="color: transparent">
-        SERVER
-    </a>
-    ".
-</p>
-
 ## Other Infomation
 
 ### Contact Me

@@ -15,14 +15,6 @@ title: "关于"
 
 **谢星霖**。原是某次为了启用马甲号随机生成的昵称，后成为笔者的主用网名兼笔名。
 
-<p style="color: transparent">
-    你也许可以在
-    <a href="https://wiki.ria.red/wiki/Goldfarmer41" style="color: transparent">
-        某个小服
-    </a>
-    遇到我留下的痕迹...?
-</p>
-
 ## 其他信息
 
 ### 联系我
